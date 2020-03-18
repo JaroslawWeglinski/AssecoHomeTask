@@ -39,7 +39,7 @@ public class Invoice {
 
     public Invoice(String number, LocalDate date, BigDecimal grossValue, String filename) {
         try {
-            this.preview = convertFilenameToBlob(filename);
+            this.preview = convertFilenameToByteArray(filename);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -53,7 +53,7 @@ public class Invoice {
         }
     }
 
-    private byte[] convertFilenameToBlob(String filename) throws IOException, SQLException {
+    private byte[] convertFilenameToByteArray(String filename) throws IOException, SQLException {
         InputStream inputStream = new ClassPathResource(filename).getInputStream();
         return IOUtils.toByteArray(inputStream);
     }
