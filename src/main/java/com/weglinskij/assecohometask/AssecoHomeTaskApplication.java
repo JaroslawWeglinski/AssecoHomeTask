@@ -25,7 +25,7 @@ public class AssecoHomeTaskApplication {
             invoiceRepository.save(new Invoice("FV 1/01/2020", LocalDate.now().minusMonths(2).minusDays(14), new BigDecimal(4399.99)));
             invoiceRepository.save(new Invoice("FV 2/01/2020", LocalDate.now().minusMonths(2).minusDays(13), new BigDecimal(12.00)));
             invoiceRepository.save(new Invoice("FV 3/01/2020", LocalDate.now().minusMonths(2).minusDays(12), new BigDecimal(9.99)));
-            invoiceRepository.save(new Invoice("FV 1/02/2020", LocalDate.now().minusMonths(1).minusDays(10), new BigDecimal(3222.22)));
+            invoiceRepository.save(new Invoice("FV 1/02/2020", LocalDate.now().minusMonths(1).minusDays(10), new BigDecimal(3222.22), "/static/pdf/FV_1_02_2020.pdf"));
             invoiceRepository.save(new Invoice("FV 2/02/2020", LocalDate.now().minusMonths(1).minusDays(9), new BigDecimal(31.31)));
             invoiceRepository.save(new Invoice("FV 3/02/2020", LocalDate.now().minusMonths(1).minusDays(8), new BigDecimal(98888.00)));
             invoiceRepository.save(new Invoice("FV 4/02/2020", LocalDate.now().minusMonths(1).minusDays(7), new BigDecimal(122.12)));
